@@ -1,3 +1,5 @@
+﻿![System Validator](https://github.com/0823nobuo-png/System_Validator/actions/workflows/system_validator.yml/badge.svg)
+
 # System Validator / Theaterverse Final
 
 **センタユニット不変＋プラグイン拡張**を原理とする本番運用向けアーキテクチャの最終版 README。対象 OS は **Ubuntu 22.04 LTS (ja-JP)**、DB は **PostgreSQL のみ**、Python は **3.11+** を前提にしています。ファイル命名規約は `<ユニット>_<機能>.<拡張子>`、区切りは `_` のみ、**同一プロジェクト内でベース名の重複禁止**（階層差あっても不可）。全ファイル末尾に `--- END OF STRUCTURE ---` を付与します。
@@ -168,3 +170,4 @@ psql "$SYSTEM_VALIDATOR_DSN" -c "SELECT 1;"
 
 /root/System_Validator/APP_DIR/theaterverse_final/README_system_validator.md
 --- END OF STRUCTURE ---
+
