@@ -1,0 +1,12 @@
+# System Validator / Theaterverse Final
+# Plugin: Observability Metrics configuration
+
+metrics:
+  port: 9000
+  path: /metrics/prometheus
+  enable_default: true
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_observability_metrics/plugin_observability_metrics_config.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_observability_metrics/plugin_observability_metrics_config.yaml
+# --- END OF STRUCTURE ---

@@ -1,0 +1,43 @@
+# System Validator / Theaterverse Final
+# CI Pipeline configuration (main)
+
+stages:
+  - lint
+  - test
+  - contracts
+  - build
+  - deploy
+
+lint:
+  stage: lint
+  script:
+    - black --check .
+    - flake8 .
+    - mypy .
+
+contracts:
+  stage: contracts
+  script:
+    - pytest tests/tests_contracts_openapi.py
+
+test:
+  stage: test
+  script:
+    - pytest -q
+
+build:
+  stage: build
+  script:
+    - echo "[Build] Building UI and packaging..."
+    - cd ui && npm ci && npm run build && cd ..
+
+deploy:
+  stage: deploy
+  script:
+    - ./scripts/script_deploy_bluegreen.sh B
+  when: manual
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/ci/ci_pipeline_main.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/ci/ci_pipeline_main.yaml
+# --- END OF STRUCTURE ---

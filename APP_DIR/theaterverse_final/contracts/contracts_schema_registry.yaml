@@ -1,0 +1,41 @@
+# System Validator / Theaterverse Final
+# Contracts: Schema Registry
+
+schemas:
+  user:
+    type: object
+    properties:
+      id:
+        type: integer
+      username:
+        type: string
+      role:
+        type: string
+    required: [id, username, role]
+
+  audit_log:
+    type: object
+    properties:
+      id:
+        type: integer
+      event_type:
+        type: string
+      details:
+        type: object
+    required: [id, event_type]
+
+  plugin_registry:
+    type: object
+    properties:
+      id:
+        type: integer
+      plugin_name:
+        type: string
+      enabled:
+        type: boolean
+    required: [id, plugin_name, enabled]
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/contracts/contracts_schema_registry.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/contracts/contracts_schema_registry.yaml
+# --- END OF STRUCTURE ---

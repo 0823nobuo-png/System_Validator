@@ -1,0 +1,14 @@
+# アプリ設定（FastAPI/Observability/Auth）
+# 正式パス：/root/System_Validator/APP_DIR/theaterverse_final/config/app_settings.yaml
+
+service_name: "theaterverse_final"
+metrics_port: 9100
+otlp_endpoint: "http://127.0.0.1:4318"  # OpenTelemetry Collector (HTTP/OTLP)
+
+auth:
+  enabled: false  # OIDCを有効にする場合は true に変更
+
+# --- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/config/app_settings.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/config/app_settings.yaml
+# --- END OF STRUCTURE ---

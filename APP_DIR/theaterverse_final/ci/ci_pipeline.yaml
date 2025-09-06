@@ -1,0 +1,73 @@
+# ci_pipeline.yaml
+# 正式パス：/root/System_Validator/APP_DIR/theaterverse_final/ci/ci_pipeline.yaml
+#
+# 目的：強化③ CI拡充（SBOM, セキュリティ検査, DR演習）
+# - Python/Node依存のSBOM生成
+# - pip-audit / npm audit 実行
+# - SAST（bandit, eslint 等）
+# - DRテスト（隔離DB復元）
+#
+name: SystemValidator-CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+
+      - name: Install Node deps
+        run: npm ci || true
+
+      - name: Run SBOM generator
+        run: python scripts/ci_sbom_generator.py
+
+      - name: Upload SBOM artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom
+          path: sbom.json
+
+      - name: Run pip-audit
+        run: pip install pip-audit && pip-audit || true
+
+      - name: Run npm audit
+        run: npm audit --audit-level=moderate || true
+
+      - name: Run Bandit (Python SAST)
+        run: pip install bandit && bandit -r core || true
+
+      - name: Run ESLint (Node SAST)
+        run: npm install eslint && npx eslint ui || true
+
+      - name: DR Restore Test
+        env:
+          PGUSER: postgres
+          PGPASSWORD: postgres
+          PGHOST: 127.0.0.1
+          PGPORT: 5432
+        run: bash scripts/dr_restore_test.sh || true
+
+# --- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/ci/ci_pipeline.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/ci/ci_pipeline.yaml
+# --- END OF STRUCTURE ---

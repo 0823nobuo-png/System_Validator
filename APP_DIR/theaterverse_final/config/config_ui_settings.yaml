@@ -1,0 +1,15 @@
+# System Validator / Theaterverse Final
+# UI settings configuration
+
+ui:
+  theme: "light"
+  language: "ja"
+  features:
+    enablePluginStore: true
+    enableMetricsDashboard: true
+    enableAuditLogViewer: true
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/config/config_ui_settings.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/config/config_ui_settings.yaml
+# --- END OF STRUCTURE ---

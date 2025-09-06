@@ -1,0 +1,12 @@
+# System Validator / Theaterverse Final
+# Plugin: Backup Verifier configuration
+
+backup:
+  path: /var/backups/system_validator.dump
+  schedule: daily
+  alert_on_failure: true
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_backup_verifier/plugin_backup_verifier_config.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_backup_verifier/plugin_backup_verifier_config.yaml
+# --- END OF STRUCTURE ---

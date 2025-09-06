@@ -1,0 +1,11 @@
+{
+  "name": "plugin_storage_postgres",
+  "version": "1.0.0",
+  "adapter": "plugin_storage_postgres_adapter.py",
+  "config": "plugin_storage_postgres_config.yaml",
+  "description": "PostgreSQL storage backend plugin for System Validator",
+  "author": "System Validator Team",
+  "license": "Proprietary"
+}
+// --- END OF STRUCTURE ---
+// /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_storage_postgres/plugin_storage_postgres_manifest.json

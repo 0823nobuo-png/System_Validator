@@ -1,0 +1,18 @@
+# System Validator / Theaterverse Final
+# Plugin: Qwen2.5-7B configuration
+
+model:
+  name: qwen2.5-7b-instruct
+  provider: local
+  path: /models/qwen2_5/7b_instruct
+  max_tokens: 4096
+  temperature: 0.7
+
+resources:
+  gpu: true
+  batch_size: 4
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_llm_qwen25_7b/plugin_llm_qwen25_7b_config.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_llm_qwen25_7b/plugin_llm_qwen25_7b_config.yaml
+# --- END OF STRUCTURE ---

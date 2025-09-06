@@ -1,0 +1,50 @@
+# requirements.txt
+# 正式パス：/root/System_Validator/APP_DIR/theaterverse_final/requirements.txt
+# 本番運用＋開発/テスト環境も含めた一元管理
+
+# Core
+fastapi==0.115.0
+uvicorn[standard]==0.30.1
+pydantic==2.9.2
+pyyaml==6.0.2
+python-dotenv==1.0.1
+requests==2.32.3
+httpx==0.27.2
+
+# Database (PostgreSQL only)
+psycopg2-binary==2.9.9
+sqlalchemy[asyncio]==2.0.34
+alembic==1.13.2
+
+# Observability / Metrics
+opentelemetry-sdk==1.27.0
+opentelemetry-exporter-otlp==1.27.0
+prometheus-client==0.21.0
+structlog==24.1.0
+
+# Testing
+pytest==8.3.3
+pytest-asyncio==0.24.0
+
+# Security
+cryptography==43.0.3
+passlib[bcrypt]==1.7.4
+bandit==1.7.9
+pip-audit==2.7.3
+
+# Tools
+jsonschema==4.23.0
+openapi-spec-validator==0.7.1
+
+# UI Build Helpers (Python side)
+watchfiles==0.24.0
+
+# Dev (Optional)
+black==24.8.0
+flake8==7.1.1
+mypy==1.11.2
+
+# --- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/requirements.txt
+/root/System_Validator/APP_DIR/theaterverse_final/requirements.txt
+--- END OF STRUCTURE ---

@@ -1,0 +1,73 @@
+# 作業前提条件（System Validator / Theaterverse Final）
+
+---
+
+## 1. パス表記に関する前提
+- すべての正式パスは `/root/System_Validator/APP_DIR/` を基点とする。
+- `/root/` は環境依存のため可変であり、Ubuntu 以外の環境でも適合できる前提とする。
+- 例: `/root/System_Validator/APP_DIR/theaterverse_final/core/core_kernel.py`
+
+---
+
+## 2. 命名規則
+- ファイル名: `<ユニット>_<機能>.<拡張子>` 形式
+- 区切り文字は `_` のみ（拡張子を除く）
+- **同一プロジェクト内で重複禁止**（階層が異なっても不可）
+- `.json` ファイルは末尾に `// --- END OF STRUCTURE ---` と正式パスコメントを付与
+- JSON 厳密モードが必要な場合は `__file_path__` フィールドを追加
+- すべてのファイル末尾に `--- END OF STRUCTURE ---` を必須付与
+
+---
+
+## 3. 修正方法のルール
+1. **修正前保存**: 既存ファイルの構文を保持する
+2. **修正後比較**: 構文の簡略化・欠落・欠如が無いことを確認
+3. **出力方式**: 1ファイル＝1キャンバス、既存キャンバスを上書きしない
+4. **終端記述確認**: `--- END OF STRUCTURE ---` の有無を必ず確認
+5. **正式パスの明示**: ファイルごとにコメントで正式パスを追記
+
+---
+
+## 4. 作業進行順序（基本）
+1. systemd 起動 → 実行 → ログ出力の一貫テスト
+2. `.env` ファイルのローダー実装確認（Python/TS/YAML 全対応）
+3. `/scripts/` 内の自動化スクリプトの動作検証
+4. UI 起動とルーティング確認（ui_main.tsx）
+5. PostgreSQL 接続・DB マイグレーション検証
+6. プラグイン単位でのE2Eテスト
+7. CI/CD パイプライン検証
+8. バックアップ検証ジョブと復旧シナリオの確認
+
+---
+
+## 5. 完全融合後の強化提案管理
+- 追加機能・強化項目は `handover_summary_and_next_steps.md` に記載済み
+- 今後の会話ではこのファイルを参照し、優先度付けして実装を行う
+
+---
+
+## 6. 再現性の保証
+- すべての資料（docs/*）は後任が読み込むことで**同一の意思・能力**で作業を継続可能
+- 参照範囲は会話1〜5および生成済み docs ファイル群
+
+--- END OF STRUCTURE ---
+<!-- /root/System_Validator/APP_DIR/theaterverse_final/docs/docs_working_prerequisites.md -->
+
+/root/System_Validator/APP_DIR/theaterverse_final/docs/docs_working_prerequisites.md
+--- END OF STRUCTURE ---
+
+### 命名規約の正式例外
+次の標準ファイルは `<ユニット>_<機能>.<拡張子>` の正式な例外とし、改名しない。
+- requirements.txt（pip/CI 標準名）
+- .env.example（dotenv 慣例名）
+
+### END マーカー（安全モード）
+- コード系はコメント化した終端を使用
+  - .py/.sh/.sql/.yml/.yaml/.ini/.env/.cfg/.conf/.service → `# --- END OF STRUCTURE ---`
+  - .ts/.tsx/.js → `// --- END OF STRUCTURE ---`
+- 文章系（.md/.txt）は生の行 `--- END OF STRUCTURE ---`
+- JSON は末尾コメント `// --- END OF STRUCTURE ---` または `__file_path__` フィールドのいずれかで可
+
+### 正式パスヒント
+各テキストの末尾近傍（最終10–15行以内）に `/System_Validator/APP_DIR/` を含む行を配置する。
+

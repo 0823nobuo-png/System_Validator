@@ -1,0 +1,63 @@
+# OIDC クライアント設定（Auth: 強化②）
+# 正式パス：/root/System_Validator/APP_DIR/theaterverse_final/config/auth_oidc_settings.yaml
+#
+# 目的：
+# - OIDCプロバイダとの連携に必要な設定を集中管理
+# - JWT検証（aud/iss/exp/nbf/scope）やロールスコープのポリシー定義
+# - sops/Vault による秘匿値の格納も想定
+#
+# ローダ：Python/TS/YAML全対応の既存ローダ方針に準拠
+#
+version: 1
+issuer: "https://example-issuer.com/"
+discovery_endpoint: ".well-known/openid-configuration"
+jwks_uri_override: null  # discoveryで取得できない場合の明示指定
+
+client:
+  client_id: "theaterverse_final"
+  # client_secretは平文で置かない（sops/Vaultで暗号化保管し、ローダで復号）
+  client_secret_env: "OIDC_CLIENT_SECRET"
+  redirect_uris:
+    - "https://your.app.local/auth/callback"
+  post_logout_redirect_uris:
+    - "https://your.app.local/"
+
+# トークン検証ポリシー
+validation:
+  allowed_audiences:
+    - "theaterverse_final"
+  clock_skew_seconds: 60
+  require_https: true
+  algorithms: ["RS256", "ES256"]
+
+# アクセス制御（スコープ→権限）
+authorization:
+  scopes:
+    # 最小権限の原則
+    - name: "read:content"
+      description: "一般閲覧"
+      roles: ["viewer", "editor", "admin"]
+    - name: "write:content"
+      description: "編集・作成"
+      roles: ["editor", "admin"]
+    - name: "admin:ops"
+      description: "運用管理（デプロイ/ロールバック等）"
+      roles: ["admin"]
+
+# 監査ログ設定
+audit:
+  enabled: true
+  sink: "postgres"
+  table: "auth_audit_logs"
+  include_request_id: true
+
+# OpenTelemetry（任意）
+telemetry:
+  enabled: true
+  attributes:
+    service_name: "theaterverse_final"
+
+# --- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/config/auth_oidc_settings.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/config/auth_oidc_settings.yaml
+# --- END OF STRUCTURE ---

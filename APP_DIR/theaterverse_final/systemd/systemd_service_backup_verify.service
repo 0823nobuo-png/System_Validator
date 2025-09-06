@@ -1,0 +1,16 @@
+[Unit]
+Description=System Validator Backup Verification Service
+After=network.target
+
+[Service]
+ExecStart=/root/System_Validator/APP_DIR/theaterverse_final/.venv/bin/python /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_backup_verifier/plugin_backup_verifier_job.py
+WorkingDirectory=/root/System_Validator/APP_DIR/theaterverse_final
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/systemd/systemd_service_backup_verify.service
+# /root/System_Validator/APP_DIR/theaterverse_final/systemd/systemd_service_backup_verify.service
+# --- END OF STRUCTURE ---

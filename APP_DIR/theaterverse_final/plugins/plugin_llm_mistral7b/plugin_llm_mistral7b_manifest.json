@@ -1,0 +1,11 @@
+{
+  "name": "plugin_llm_mistral7b",
+  "version": "1.0.0",
+  "adapter": "plugin_llm_mistral7b_adapter.py",
+  "config": "plugin_llm_mistral7b_config.yaml",
+  "description": "Mistral-7B integration plugin for System Validator (shared instance)",
+  "author": "System Validator Team",
+  "license": "Proprietary"
+}
+// --- END OF STRUCTURE ---
+// /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_llm_mistral7b/plugin_llm_mistral7b_manifest.json

@@ -1,0 +1,11 @@
+{
+  "name": "plugin_debug_inspector",
+  "version": "1.0.0",
+  "adapter": "plugin_debug_inspector_panel.py",
+  "config": "plugin_debug_inspector_routes.py",
+  "description": "Debug inspector plugin for runtime inspection and diagnostics",
+  "author": "System Validator Team",
+  "license": "Proprietary"
+}
+// --- END OF STRUCTURE ---
+// /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_debug_inspector/plugin_debug_inspector_manifest.json

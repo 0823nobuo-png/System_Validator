@@ -1,0 +1,9 @@
+{
+  "plugin": "plugin_ui_console",
+  "assets": [
+    "plugin_ui_console_panel.tsx",
+    "plugin_ui_console_routes.py"
+  ]
+}
+// --- END OF STRUCTURE ---
+// /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_ui_console/plugin_ui_console_assets.json

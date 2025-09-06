@@ -1,0 +1,19 @@
+# System Validator / Theaterverse Final
+# RBAC Roles configuration
+
+admin:
+  - "*"   # full access to all resources
+
+operator:
+  - "read:status"
+  - "write:deploy"
+  - "read:logs"
+
+viewer:
+  - "read:status"
+  - "read:metrics"
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/config/config_rbac_roles.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/config/config_rbac_roles.yaml
+# --- END OF STRUCTURE ---

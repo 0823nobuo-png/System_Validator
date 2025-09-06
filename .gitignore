@@ -1,0 +1,32 @@
+﻿# --- System_Validator gitignore (safe defaults) ---
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+
+# Node / UI
+node_modules/
+dist/
+build/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs / archives
+*.log
+*.zip
+
+# Secrets
+.env
+.env.*
+
+# Project-specific (validator outputs areCI成果物として保存; Gitには含めない)
+APP_DIR/theaterverse_final/_validator_outputs/

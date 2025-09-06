@@ -1,0 +1,18 @@
+# System Validator / Theaterverse Final
+# Contracts: OpenAPI Guard
+
+openapi_guard:
+  required_endpoints:
+    - path: /health
+      method: get
+    - path: /metrics
+      method: get
+  required_plugins:
+    - plugin_llm_qwen25_7b
+    - plugin_llm_mistral7b
+    - plugin_storage_postgres
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/contracts/contracts_openapi_guard.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/contracts/contracts_openapi_guard.yaml
+# --- END OF STRUCTURE ---

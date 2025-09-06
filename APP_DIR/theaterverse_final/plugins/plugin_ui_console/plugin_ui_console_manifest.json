@@ -1,0 +1,11 @@
+{
+  "name": "plugin_ui_console",
+  "version": "1.0.0",
+  "adapter": "plugin_ui_console_routes.py",
+  "config": "plugin_ui_console_panel.tsx",
+  "description": "Web-based console UI plugin for System Validator",
+  "author": "System Validator Team",
+  "license": "Proprietary"
+}
+// --- END OF STRUCTURE ---
+// /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_ui_console/plugin_ui_console_manifest.json

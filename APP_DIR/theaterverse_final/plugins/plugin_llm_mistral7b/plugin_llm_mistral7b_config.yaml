@@ -1,0 +1,18 @@
+# System Validator / Theaterverse Final
+# Plugin: Mistral-7B configuration (shared instance)
+
+model:
+  name: mistral-7b-instruct
+  provider: local
+  path: /models/mistral/7b_instruct
+  max_tokens: 4096
+  temperature: 0.7
+
+resources:
+  gpu: true
+  batch_size: 4
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_llm_mistral7b/plugin_llm_mistral7b_config.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_llm_mistral7b/plugin_llm_mistral7b_config.yaml
+# --- END OF STRUCTURE ---

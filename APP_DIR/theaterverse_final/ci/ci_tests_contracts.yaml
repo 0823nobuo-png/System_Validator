@@ -1,0 +1,15 @@
+# System Validator / Theaterverse Final
+# CI: Contracts test configuration
+
+stages:
+  - contracts
+
+contracts:
+  stage: contracts
+  script:
+    - pytest tests/tests_contracts_openapi.py -q
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/ci/ci_tests_contracts.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/ci/ci_tests_contracts.yaml
+# --- END OF STRUCTURE ---

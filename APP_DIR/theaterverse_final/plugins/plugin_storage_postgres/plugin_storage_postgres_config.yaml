@@ -1,0 +1,12 @@
+# System Validator / Theaterverse Final
+# Plugin: PostgreSQL Storage configuration
+
+storage:
+  pool_size: 10
+  max_overflow: 5
+  echo: false
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_storage_postgres/plugin_storage_postgres_config.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_storage_postgres/plugin_storage_postgres_config.yaml
+# --- END OF STRUCTURE ---

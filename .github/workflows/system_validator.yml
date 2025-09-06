@@ -1,0 +1,37 @@
+﻿name: System Validator
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run validator (SAFE v2)
+        run: |
+          python APP_DIR/tools/VerificationKit/verificationkit_validator_scan_safe2.py --root APP_DIR/theaterverse_final
+
+      - name: Assert zero violations
+        run: |
+          python - << 'PY'
+          import json, sys
+          p='APP_DIR/theaterverse_final/_validator_outputs/rule_violations.json'
+          d=json.load(open(p, encoding='utf-8'))
+          bad=sum(len(d[k]) for k in ['naming_rule','end_marker','formal_path_hint','forbidden_sqlite','pep420_init'])
+          print("violations:", bad)
+          sys.exit(1 if bad else 0)
+          PY
+
+      - name: Upload _validator_outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validator-outputs
+          path: APP_DIR/theaterverse_final/_validator_outputs

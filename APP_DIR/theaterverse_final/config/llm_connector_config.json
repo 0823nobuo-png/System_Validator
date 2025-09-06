@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "default_provider": "vllm",
+  "routing": {
+    "strategy": "failover-priority", 
+    "priority": ["vllm", "llamacpp", "openai"],
+    "timeout_ms": 20000,
+    "retry": {"max_attempts": 3, "backoff": {"type": "exponential", "base_ms": 300, "max_ms": 4000}}
+  },
+  "telemetry": {"otel_enabled": true, "service_name": "theaterverse_final", "sample_ratio": 0.2},
+  "rate_limit": {
+    "window_ms": 60000,
+    "burst": 30,
+    "per_provider": {"vllm": 20, "llamacpp": 20, "openai": 60}
+  },
+  "providers": {
+    "vllm": {
+      "type": "http",
+      "base_url": "http://127.0.0.1:8000/v1",
+      "default_model": "qwen2.5-7b-instruct",
+      "auth": null,
+      "health": {"endpoint": "/health", "expected_status": 200},
+      "request": {"timeout_ms": 15000, "max_tokens": 1024, "temperature": 0.3}
+    },
+    "llamacpp": {
+      "type": "http",
+      "base_url": "http://127.0.0.1:8080",
+      "default_model": "mistral-7b-instruct-q5_1",
+      "auth": null,
+      "health": {"endpoint": "/health", "expected_status": 200},
+      "request": {"timeout_ms": 15000, "max_tokens": 1024, "temperature": 0.3}
+    },
+    "openai": {
+      "type": "openai",
+      "base_url": "https://api.openai.com/v1",
+      "default_model": "gpt-4o-mini",
+      "auth": {"env": "OPENAI_API_KEY"},
+      "health": {"endpoint": "/models", "expected_status": 200},
+      "request": {"timeout_ms": 15000, "max_tokens": 1024, "temperature": 0.3}
+    }
+  },
+  "validation": {
+    "schema": 1,
+    "required": ["version", "providers", "routing"],
+    "allow_unknown_fields": false
+  },
+  "__file_path__": "/root/System_Validator/APP_DIR/theaterverse_final/config/llm_connector_config.json",
+  "__end_of_structure__": "--- END OF STRUCTURE ---"
+}

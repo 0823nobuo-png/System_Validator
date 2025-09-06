@@ -1,0 +1,17 @@
+# System Validator / Theaterverse Final
+# CI: Lint and Type Check configuration
+
+stages:
+  - lint
+
+lint:
+  stage: lint
+  script:
+    - black --check .
+    - flake8 .
+    - mypy .
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/ci/ci_lint_typecheck.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/ci/ci_lint_typecheck.yaml
+# --- END OF STRUCTURE ---

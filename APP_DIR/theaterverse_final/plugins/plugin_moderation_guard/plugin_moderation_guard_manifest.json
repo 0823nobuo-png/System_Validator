@@ -1,0 +1,11 @@
+{
+  "name": "plugin_moderation_guard",
+  "version": "1.0.0",
+  "adapter": "plugin_moderation_guard_adapter.py",
+  "config": "plugin_moderation_guard_rules.yaml",
+  "description": "Moderation and content guard plugin for System Validator",
+  "author": "System Validator Team",
+  "license": "Proprietary"
+}
+// --- END OF STRUCTURE ---
+// /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_moderation_guard/plugin_moderation_guard_manifest.json

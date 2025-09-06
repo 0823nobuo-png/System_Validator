@@ -1,0 +1,12 @@
+{
+  "model": "qwen2.5-7b-instruct",
+  "tokenizer": "default",
+  "vocab_size": 152064,
+  "bos_token": "<s>",
+  "eos_token": "</s>",
+  "unk_token": "<unk>",
+  "pad_token": "<pad>",
+  "special_tokens": ["<s>", "</s>", "<unk>", "<pad>"]
+}
+// --- END OF STRUCTURE ---
+// /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_llm_qwen25_7b/plugin_llm_qwen25_7b_tokenizer.json

@@ -1,0 +1,22 @@
+# System Validator / Theaterverse Final
+# High-level systemd service unit configuration (for reference)
+
+api_service:
+  unit: systemd_service_api.service
+  description: "System Validator API"
+  type: service
+
+backup_service:
+  unit: systemd_service_backup_verify.service
+  description: "System Validator Backup Verifier"
+  type: service
+
+backup_timer:
+  unit: systemd_timer_backup_verify.timer
+  description: "Daily Backup Verification Timer"
+  type: timer
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/systemd/systemd_service_unit.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/systemd/systemd_service_unit.yaml
+# --- END OF STRUCTURE ---

@@ -1,0 +1,11 @@
+{
+  "name": "plugin_observability_metrics",
+  "version": "1.0.0",
+  "adapter": "plugin_observability_metrics_exporter.py",
+  "config": "plugin_observability_metrics_config.yaml",
+  "description": "Observability metrics exporter plugin (Prometheus compatible)",
+  "author": "System Validator Team",
+  "license": "Proprietary"
+}
+// --- END OF STRUCTURE ---
+// /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_observability_metrics/plugin_observability_metrics_manifest.json

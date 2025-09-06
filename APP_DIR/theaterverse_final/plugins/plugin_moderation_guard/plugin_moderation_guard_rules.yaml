@@ -1,0 +1,19 @@
+# System Validator / Theaterverse Final
+# Plugin: Moderation Guard Rules
+
+- id: 1
+  description: "Block offensive language"
+  pattern: "badword"
+
+- id: 2
+  description: "Block sensitive data leakage"
+  pattern: "password"
+
+- id: 3
+  description: "Block SQL injection attempts"
+  pattern: "SELECT * FROM"
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_moderation_guard/plugin_moderation_guard_rules.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_moderation_guard/plugin_moderation_guard_rules.yaml
+# --- END OF STRUCTURE ---

@@ -1,0 +1,11 @@
+{
+  "name": "plugin_llm_qwen25_7b",
+  "version": "1.0.0",
+  "adapter": "plugin_llm_qwen25_7b_adapter.py",
+  "config": "plugin_llm_qwen25_7b_config.yaml",
+  "description": "Qwen2.5-7B Instruct integration plugin for System Validator",
+  "author": "System Validator Team",
+  "license": "Proprietary"
+}
+// --- END OF STRUCTURE ---
+// /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_llm_qwen25_7b/plugin_llm_qwen25_7b_manifest.json

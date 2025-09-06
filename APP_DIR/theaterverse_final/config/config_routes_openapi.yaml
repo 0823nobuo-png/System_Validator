@@ -1,0 +1,27 @@
+# System Validator / Theaterverse Final
+# OpenAPI routes configuration (core + plugins)
+
+openapi:
+  info:
+    title: System Validator API
+    version: "1.0.0"
+  servers:
+    - url: http://localhost:8080
+  paths:
+    /health:
+      get:
+        summary: Health check
+        responses:
+          '200':
+            description: OK
+    /metrics:
+      get:
+        summary: Metrics endpoint
+        responses:
+          '200':
+            description: Metrics export
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/config/config_routes_openapi.yaml
+# /root/System_Validator/APP_DIR/theaterverse_final/config/config_routes_openapi.yaml
+# --- END OF STRUCTURE ---

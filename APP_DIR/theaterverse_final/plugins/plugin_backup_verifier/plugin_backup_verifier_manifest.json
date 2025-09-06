@@ -1,0 +1,11 @@
+{
+  "name": "plugin_backup_verifier",
+  "version": "1.0.0",
+  "adapter": "plugin_backup_verifier_job.py",
+  "config": "plugin_backup_verifier_config.yaml",
+  "description": "Backup verification plugin with scheduled job",
+  "author": "System Validator Team",
+  "license": "Proprietary"
+}
+// --- END OF STRUCTURE ---
+// /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_backup_verifier/plugin_backup_verifier_manifest.json

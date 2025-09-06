@@ -1,0 +1,17 @@
+[Unit]
+Description=System Validator API Service
+After=network.target
+
+[Service]
+ExecStart=/root/System_Validator/APP_DIR/theaterverse_final/.venv/bin/python /root/System_Validator/APP_DIR/theaterverse_final/core/core_api_server.py
+WorkingDirectory=/root/System_Validator/APP_DIR/theaterverse_final
+Restart=always
+EnvironmentFile=/root/System_Validator/APP_DIR/theaterverse_final/.env
+
+[Install]
+WantedBy=multi-user.target
+
+--- END OF STRUCTURE ---
+# /root/System_Validator/APP_DIR/theaterverse_final/systemd/systemd_service_api.service
+# /root/System_Validator/APP_DIR/theaterverse_final/systemd/systemd_service_api.service
+# --- END OF STRUCTURE ---
