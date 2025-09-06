@@ -18,21 +18,6 @@ jobs:
         run: |
           python APP_DIR/tools/VerificationKit/verificationkit_validator_scan_safe2.py --root APP_DIR/theaterverse_final
 
-      - name: Show violations detail
-        if: always()
-        run: |
-          python - << 'PY'
-          import json, os
-          p='APP_DIR/theaterverse_final/_validator_outputs/rule_violations.json'
-          print("exists:", os.path.exists(p), p)
-          d=json.load(open(p, encoding='utf-8'))
-          for k in ['naming_rule','end_marker','formal_path_hint','forbidden_sqlite','pep420_init']:
-              arr=d.get(k,[])
-              print(f'## {k}: {len(arr)}')
-              for x in arr[:50]:
-                  print(' -', x)
-          PY
-
       - name: Assert zero violations
         run: |
           python - << 'PY'
