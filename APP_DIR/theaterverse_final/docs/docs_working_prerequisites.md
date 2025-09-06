@@ -71,3 +71,6 @@
 ### 正式パスヒント
 各テキストの末尾近傍（最終10–15行以内）に `/System_Validator/APP_DIR/` を含む行を配置する。
 
+--- END OF STRUCTURE ---
+/root/System_Validator/APP_DIR/theaterverse_final/docs/docs_working_prerequisites.md
+--- END OF STRUCTURE ---
