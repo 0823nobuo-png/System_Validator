@@ -1,4 +1,6 @@
-﻿![System Validator](https://github.com/0823nobuo-png/System_Validator/actions/workflows/system_validator.yml/badge.svg)
+﻿[![System Validator](https://github.com/0823nobuo-png/System_Validator/actions/workflows/system_validator.yml/badge.svg)](https://github.com/0823nobuo-png/System_Validator/actions)
+
+![System Validator](https://github.com/0823nobuo-png/System_Validator/actions/workflows/system_validator.yml/badge.svg)
 
 # System Validator / Theaterverse Final
 
@@ -170,4 +172,5 @@ psql "$SYSTEM_VALIDATOR_DSN" -c "SELECT 1;"
 
 /root/System_Validator/APP_DIR/theaterverse_final/README_system_validator.md
 --- END OF STRUCTURE ---
+
 

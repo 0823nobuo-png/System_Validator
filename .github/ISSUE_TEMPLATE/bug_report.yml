@@ -1,0 +1,17 @@
+﻿name: Bug report
+description: バグ報告
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: 事象
+      description: 何が起きたか
+  - type: textarea
+    attributes:
+      label: 再現手順
+  - type: textarea
+    attributes:
+      label: 期待結果
+  - type: textarea
+    attributes:
+      label: ログ/スクリーンショット

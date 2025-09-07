@@ -1,0 +1,16 @@
+﻿name: Feature request
+description: 機能追加の提案
+labels: ["enhancement"]
+body:
+  - type: textarea
+    attributes:
+      label: 概要
+  - type: textarea
+    attributes:
+      label: ユースケース / 価値
+  - type: textarea
+    attributes:
+      label: 受け入れ条件
+  - type: textarea
+    attributes:
+      label: 追加メモ
