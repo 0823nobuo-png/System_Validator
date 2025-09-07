@@ -3,6 +3,10 @@
 on:
   push:
   pull_request:
+  workflow_dispatch:
+  schedule:
+    # UTC 17:30 = JST 02:30 毎日
+    - cron: "30 17 * * *"
 
 jobs:
   validate:
@@ -35,3 +39,4 @@ jobs:
         with:
           name: validator-outputs
           path: APP_DIR/theaterverse_final/_validator_outputs
+          retention-days: 14
