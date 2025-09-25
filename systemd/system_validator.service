@@ -1,7 +1,6 @@
-# system_validator.service
-# 正式パス：/root/System_Validator/APP_DIR/theaterverse_final/systemd/system_validator.service
-# 目的：サービス起動とセキュリティハードニング（強化⑦）
-
+﻿# system_validator.service
+# 豁｣蠑上ヱ繧ｹ・・root/System_Validator/APP_DIR/theaterverse_final/systemd/system_validator.service
+# 逶ｮ逧・ｼ壹し繝ｼ繝薙せ襍ｷ蜍輔→繧ｻ繧ｭ繝･繝ｪ繝・ぅ繝上・繝峨ル繝ｳ繧ｰ・亥ｼｷ蛹問即・・
 [Unit]
 Description=System Validator (Theaterverse Final)
 After=network-online.target
@@ -12,7 +11,7 @@ StartLimitIntervalSec=60
 [Service]
 Type=simple
 WorkingDirectory=/root/System_Validator/APP_DIR/theaterverse_final/current
-ExecStart=/usr/bin/env python3 -m app.main
+ExecStart=/usr/bin/env python3 -m app.app_main
 Restart=on-failure
 RestartSec=3
 EnvironmentFile=/root/System_Validator/APP_DIR/theaterverse_final/.env
@@ -37,8 +36,7 @@ CapabilityBoundingSet=
 AmbientCapabilities=
 SystemCallFilter=@system-service @basic-io @network-io ~@mount ~@privileged
 
-# ポートを使う場合の例（必要に応じて調整）
-# ExecStartPre=/usr/bin/bash -lc 'test -S /run/system_validator.sock && rm -f /run/system_validator.sock || true'
+# 繝昴・繝医ｒ菴ｿ縺・ｴ蜷医・萓具ｼ亥ｿ・ｦ√↓蠢懊§縺ｦ隱ｿ謨ｴ・・# ExecStartPre=/usr/bin/bash -lc 'test -S /run/system_validator.sock && rm -f /run/system_validator.sock || true'
 # Socket=/run/system_validator.sock
 
 [Install]
