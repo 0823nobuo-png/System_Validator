@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Tests: Config Loader (Python)
 
@@ -30,7 +30,7 @@ def test_config_loader_env_and_yaml(tmp_path, monkeypatch):
     assert cfg["SYSTEM_VALIDATOR_DSN"].startswith("postgresql")
     assert cfg["API_BIND_PORT"] == 1234
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/tests/tests_config_loader_python.py
 # /root/System_Validator/APP_DIR/theaterverse_final/tests/tests_config_loader_python.py
 # --- END OF STRUCTURE ---

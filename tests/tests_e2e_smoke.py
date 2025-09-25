@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Tests: End-to-End Smoke Tests
 
@@ -27,7 +27,7 @@ async def test_metrics():
         assert r.status_code == 200
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/tests/tests_e2e_smoke.py
 # /root/System_Validator/APP_DIR/theaterverse_final/tests/tests_e2e_smoke.py
 # --- END OF STRUCTURE ---

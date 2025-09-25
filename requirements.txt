@@ -1,7 +1,6 @@
-# requirements.txt
-# 正式パス：/root/System_Validator/APP_DIR/theaterverse_final/requirements.txt
-# 本番運用＋開発/テスト環境も含めた一元管理
-
+﻿# requirements.txt
+# 豁｣蠑上ヱ繧ｹ・・root/System_Validator/APP_DIR/theaterverse_final/requirements.txt
+# 譛ｬ逡ｪ驕狗畑・矩幕逋ｺ/繝・せ繝育腸蠅・ｂ蜷ｫ繧√◆荳蜈・ｮ｡逅・
 # Core
 fastapi==0.115.0
 uvicorn[standard]==0.30.1
@@ -46,5 +45,5 @@ mypy==1.11.2
 
 # --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/requirements.txt
-/root/System_Validator/APP_DIR/theaterverse_final/requirements.txt
+# removed: self-referencing requirements.txt path
 --- END OF STRUCTURE ---

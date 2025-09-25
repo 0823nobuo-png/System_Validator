@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Tests: Performance Smoke Tests
 
@@ -24,7 +24,7 @@ async def test_health_latency():
         assert elapsed < MAX_LATENCY, f"Health endpoint too slow: {elapsed:.2f}s"
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/tests/tests_perf_smoke.py
 # /root/System_Validator/APP_DIR/theaterverse_final/tests/tests_perf_smoke.py
 # --- END OF STRUCTURE ---

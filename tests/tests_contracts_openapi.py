@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Tests: OpenAPI Contract Validation
 
@@ -30,7 +30,7 @@ async def test_openapi_contracts():
                 assert response.status_code == 200, f"{method.upper()} {url} failed"
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/tests/tests_contracts_openapi.py
 # /root/System_Validator/APP_DIR/theaterverse_final/tests/tests_contracts_openapi.py
 # --- END OF STRUCTURE ---

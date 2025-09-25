@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Tests: Plugin Storage Postgres
 
@@ -21,7 +21,7 @@ async def test_list_plugins():
         assert "plugins" in data
         assert isinstance(data["plugins"], list)
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/tests/tests_plugin_storage_postgres.py
 # /root/System_Validator/APP_DIR/theaterverse_final/tests/tests_plugin_storage_postgres.py
 # --- END OF STRUCTURE ---
