@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Tool: JSON Loader (Python)
 
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     sample_path = "/root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_llm_qwen25_7b/plugin_llm_qwen25_7b_manifest.json"
     print(loader.load(sample_path))
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/tools/tool_json_loader_python.py
 # /root/System_Validator/APP_DIR/theaterverse_final/tools/tool_json_loader_python.py
 # --- END OF STRUCTURE ---

@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Core Security Policy - RBAC and policy enforcement.
 
@@ -37,7 +37,7 @@ class SecurityPolicy:
         return False
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_security_policy.py
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_security_policy.py
 # --- END OF STRUCTURE ---

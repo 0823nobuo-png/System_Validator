@@ -1,14 +1,12 @@
-"""
+﻿"""
 deploy_bluegreen.py
 
-目的（強化⑥ 運用自動化）：
-- Blue/Green デプロイのリリース切替
-- Gitタグ/リリースIDに紐付くリリースディレクトリをアトミックに切替
-- 事前/事後ヘルスチェック
-- 失敗時は自動ロールバック
-- Slack/メール通知（任意・環境変数で有効化）
-
-正式パス：/root/System_Validator/APP_DIR/theaterverse_final/scripts/deploy_bluegreen.py
+逶ｮ逧・ｼ亥ｼｷ蛹問則 驕狗畑閾ｪ蜍募喧・会ｼ・- Blue/Green 繝・・繝ｭ繧､縺ｮ繝ｪ繝ｪ繝ｼ繧ｹ蛻・崛
+- Git繧ｿ繧ｰ/繝ｪ繝ｪ繝ｼ繧ｹID縺ｫ邏蝉ｻ倥￥繝ｪ繝ｪ繝ｼ繧ｹ繝・ぅ繝ｬ繧ｯ繝医Μ繧偵い繝医Α繝・け縺ｫ蛻・崛
+- 莠句燕/莠句ｾ後・繝ｫ繧ｹ繝√ぉ繝・け
+- 螟ｱ謨玲凾縺ｯ閾ｪ蜍輔Ο繝ｼ繝ｫ繝舌ャ繧ｯ
+- Slack/繝｡繝ｼ繝ｫ騾夂衍・井ｻｻ諢上・迺ｰ蠅・､画焚縺ｧ譛牙柑蛹厄ｼ・
+豁｣蠑上ヱ繧ｹ・・root/System_Validator/APP_DIR/theaterverse_final/scripts/deploy_bluegreen.py
 """
 from __future__ import annotations
 
@@ -22,11 +20,10 @@ from pathlib import Path
 from typing import Optional
 
 APP_ROOT = Path(os.environ.get("APP_ROOT", "/root/System_Validator/APP_DIR/theaterverse_final"))
-RELEASES = APP_ROOT / "releases"            # 例：releases/2025-09-05_1234_gittag
-CURRENT  = APP_ROOT / "current"              # 稼働中へのシンボリックリンク
+RELEASES = APP_ROOT / "releases"            # 萓具ｼ嗷eleases/2025-09-05_1234_gittag
+CURRENT  = APP_ROOT / "current"              # 遞ｼ蜒堺ｸｭ縺ｸ縺ｮ繧ｷ繝ｳ繝懊Μ繝・け繝ｪ繝ｳ繧ｯ
 HEALTH_URL = os.environ.get("HEALTH_URL", "http://127.0.0.1:8000/health")
-NEW_RELEASE = os.environ.get("NEW_RELEASE")  # 必須：切替対象ディレクトリ名
-
+NEW_RELEASE = os.environ.get("NEW_RELEASE")  # 蠢・茨ｼ壼・譖ｿ蟇ｾ雎｡繝・ぅ繝ｬ繧ｯ繝医Μ蜷・
 SLACK_WEBHOOK = os.environ.get("SLACK_WEBHOOK")
 MAIL_TO = os.environ.get("MAIL_TO")
 MAIL_CMD = os.environ.get("MAIL_CMD", "mail")
@@ -84,21 +81,19 @@ def main() -> None:
 
     notify("Blue/Green Start", f"Switching to {new_path}")
 
-    # 事前ヘルス
+    # 莠句燕繝倥Ν繧ｹ
     if not check_health(HEALTH_URL, timeout=5.0):
         notify("Blue/Green Warning", "Pre-switch health check failed (current)")
 
-    # 切替
+    # 蛻・崛
     atomic_symlink(new_path, CURRENT)
 
-    # 再起動（systemd 経由を推奨）
-    try:
+    # 蜀崎ｵｷ蜍包ｼ・ystemd 邨檎罰繧呈耳螂ｨ・・    try:
         subprocess.run(["systemctl", "restart", "system_validator.service"], check=True)
     except Exception:
         notify("Blue/Green Info", "systemctl restart failed; ensure unit file is installed")
 
-    # 事後ヘルス（新リリース）
-    for i in range(10):
+    # 莠句ｾ後・繝ｫ繧ｹ・域眠繝ｪ繝ｪ繝ｼ繧ｹ・・    for i in range(10):
         if check_health(HEALTH_URL, timeout=3.0):
             notify("Blue/Green Success", f"Now serving {new_path}")
             break

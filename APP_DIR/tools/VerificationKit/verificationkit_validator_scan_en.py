@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 SystemValidator Verification Kit - validator_scan (ASCII-safe)
 This tool scans a project directory and produces:

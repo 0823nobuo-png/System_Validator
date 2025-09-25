@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Plugin: UI Console Routes
 
@@ -30,7 +30,7 @@ def routes(app):
     app.include_router(router)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_ui_console/plugin_ui_console_routes.py
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_ui_console/plugin_ui_console_routes.py
 # --- END OF STRUCTURE ---

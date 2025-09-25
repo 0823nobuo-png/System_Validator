@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Plugin: Observability Metrics Exporter
 
@@ -35,7 +35,7 @@ def routes(app):
     app.include_router(router)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_observability_metrics/plugin_observability_metrics_exporter.py
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_observability_metrics/plugin_observability_metrics_exporter.py
 # --- END OF STRUCTURE ---

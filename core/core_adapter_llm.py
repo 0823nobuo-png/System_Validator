@@ -1,16 +1,10 @@
-"""
+﻿"""
 core_adapter_llm.py
 
-LLMアダプタ本実装：
-- プロバイダ（vLLM/llama.cpp/OpenAI）を統一IFで呼び出し
-- 失敗時のフェイルオーバ（priority順）
-- リトライ（指数バックオフ）
-- レートリミット（トークンバケット簡易実装）
-- タイムアウト
-- OpenTelemetry(任意)計測フック
-- 設定は config/llm_connector_config.json から読み込み
+LLM繧｢繝繝励ち譛ｬ螳溯｣・ｼ・- 繝励Ο繝舌う繝・・LLM/llama.cpp/OpenAI・峨ｒ邨ｱ荳IF縺ｧ蜻ｼ縺ｳ蜃ｺ縺・- 螟ｱ謨玲凾縺ｮ繝輔ぉ繧､繝ｫ繧ｪ繝ｼ繝撰ｼ・riority鬆・ｼ・- 繝ｪ繝医Λ繧､・域欠謨ｰ繝舌ャ繧ｯ繧ｪ繝包ｼ・- 繝ｬ繝ｼ繝医Μ繝溘ャ繝茨ｼ医ヨ繝ｼ繧ｯ繝ｳ繝舌こ繝・ヨ邁｡譏灘ｮ溯｣・ｼ・- 繧ｿ繧､繝繧｢繧ｦ繝・- OpenTelemetry(莉ｻ諢・險域ｸｬ繝輔ャ繧ｯ
+- 險ｭ螳壹・ config/llm_connector_config.json 縺九ｉ隱ｭ縺ｿ霎ｼ縺ｿ
 
-正式パス：/root/System_Validator/APP_DIR/theaterverse_final/core/core_adapter_llm.py
+豁｣蠑上ヱ繧ｹ・・root/System_Validator/APP_DIR/theaterverse_final/core/core_adapter_llm.py
 """
 from __future__ import annotations
 
@@ -102,8 +96,7 @@ class LLMAdapter:
 
     # ------------------------- Public API ------------------------- #
     def chat(self, messages: List[Dict[str, str]], model: Optional[str] = None, **kwargs: Any) -> Dict[str, Any]:
-        """ユニファイド Chat API。messagesはOpenAI互換形式を想定。
-        戻り値もOpenAI互換の最小形で返す。"""
+        """繝ｦ繝九ヵ繧｡繧､繝・Chat API縲Ｎessages縺ｯOpenAI莠呈鋤蠖｢蠑上ｒ諠ｳ螳壹・        謌ｻ繧雁､繧０penAI莠呈鋤縺ｮ譛蟆丞ｽ｢縺ｧ霑斐☆縲・""
         with _TRACER.start_as_current_span("llm.chat") as span:
             span.set_attribute("llm.messages.count", len(messages))
             last_error: Optional[Exception] = None
@@ -237,11 +230,10 @@ class LLMAdapter:
 
     @staticmethod
     def _as_openai_min(obj: Dict[str, Any]) -> Dict[str, Any]:
-        # 一部の自前サーバはOpenAI互換を返すが、安全側で最小変換
+        # 荳驛ｨ縺ｮ閾ｪ蜑阪し繝ｼ繝舌・OpenAI莠呈鋤繧定ｿ斐☆縺後∝ｮ牙・蛛ｴ縺ｧ譛蟆丞､画鋤
         if "choices" in obj:
             return obj
-        # 最低限の整形（contentの想定キーを探す）
-        content = (
+        # 譛菴朱剞縺ｮ謨ｴ蠖｢・・ontent縺ｮ諠ｳ螳壹く繝ｼ繧呈爾縺呻ｼ・        content = (
             obj.get("message")
             or obj.get("output")
             or obj.get("text")

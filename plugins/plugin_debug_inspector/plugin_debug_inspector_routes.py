@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Plugin: Debug Inspector Routes
 
@@ -40,7 +40,7 @@ def routes(app):
     app.include_router(router)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_debug_inspector/plugin_debug_inspector_routes.py
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_debug_inspector/plugin_debug_inspector_routes.py
 # --- END OF STRUCTURE ---

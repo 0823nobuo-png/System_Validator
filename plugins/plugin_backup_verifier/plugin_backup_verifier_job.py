@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Plugin: Backup Verifier Job
 
@@ -45,7 +45,7 @@ def routes(app):
     app.include_router(router)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_backup_verifier/plugin_backup_verifier_job.py
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_backup_verifier/plugin_backup_verifier_job.py
 # --- END OF STRUCTURE ---

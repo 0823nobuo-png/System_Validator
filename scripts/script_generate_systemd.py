@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Script: Generate systemd unit files
 
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     generate_backup_service()
     generate_backup_timer()
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/scripts/script_generate_systemd.py
 # /root/System_Validator/APP_DIR/theaterverse_final/scripts/script_generate_systemd.py
 # --- END OF STRUCTURE ---

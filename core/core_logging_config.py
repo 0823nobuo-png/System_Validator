@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Core Logging Config - Structured logging setup.
 
@@ -42,7 +42,7 @@ def configure_logging():
     logging.info("Logging configured with level %s", log_level)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_logging_config.py
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_logging_config.py
 # --- END OF STRUCTURE ---

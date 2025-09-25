@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Plugin: Mistral-7B Adapter (shared instance)
 
@@ -34,7 +34,7 @@ def routes(app):
     app.include_router(router)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_llm_mistral7b/plugin_llm_mistral7b_adapter.py
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_llm_mistral7b/plugin_llm_mistral7b_adapter.py
 # --- END OF STRUCTURE ---

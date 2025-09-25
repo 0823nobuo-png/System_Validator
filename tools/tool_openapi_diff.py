@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Tool: OpenAPI Diff
 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     d = diff_openapi(f1, f2)
     print(d)
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/tools/tool_openapi_diff.py
 # /root/System_Validator/APP_DIR/theaterverse_final/tools/tool_openapi_diff.py
 # --- END OF STRUCTURE ---

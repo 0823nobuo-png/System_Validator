@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Core Error Handler - Centralized exception and error reporting.
 
@@ -41,7 +41,7 @@ class ErrorHandler:
         return error_info
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_error_handler.py
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_error_handler.py
 # --- END OF STRUCTURE ---

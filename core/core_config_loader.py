@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Core Config Loader - Environment and YAML configuration management.
 
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     cfg = loader.load()
     print("Loaded config keys:", list(cfg.keys()))
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_config_loader.py
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_config_loader.py
 # --- END OF STRUCTURE ---

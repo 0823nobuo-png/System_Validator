@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Core Router - FastAPI router configuration.
 
@@ -36,7 +36,7 @@ class CoreRouter:
                     logger.exception("Failed to integrate routes for %s: %s", name, e)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_router.py
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_router.py
 # --- END OF STRUCTURE ---

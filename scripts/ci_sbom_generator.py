@@ -1,15 +1,11 @@
-"""
+﻿"""
 ci_sbom_generator.py
 
-機能：
-- CI/CD パイプライン強化（強化③）の一環
-- Python, Node.js 依存関係のSBOM（Software Bill of Materials）をJSON形式で出力
-- CycloneDX 1.5 準拠の最小構造を生成
-- SPDXライセンス表記も付与可能
-- CI内で実行し、成果物を artifacts として保存
-
-正式パス：/root/System_Validator/APP_DIR/theaterverse_final/scripts/ci_sbom_generator.py
-依存：pip freeze / npm ls --json
+讖溯・・・- CI/CD 繝代う繝励Λ繧､繝ｳ蠑ｷ蛹厄ｼ亥ｼｷ蛹問造・峨・荳迺ｰ
+- Python, Node.js 萓晏ｭ倬未菫ゅ・SBOM・・oftware Bill of Materials・峨ｒJSON蠖｢蠑上〒蜃ｺ蜉・- CycloneDX 1.5 貅匁侠縺ｮ譛蟆乗ｧ矩繧堤函謌・- SPDX繝ｩ繧､繧ｻ繝ｳ繧ｹ陦ｨ險倥ｂ莉倅ｸ主庄閭ｽ
+- CI蜀・〒螳溯｡後＠縲∵・譫懃黄繧・artifacts 縺ｨ縺励※菫晏ｭ・
+豁｣蠑上ヱ繧ｹ・・root/System_Validator/APP_DIR/theaterverse_final/scripts/ci_sbom_generator.py
+萓晏ｭ假ｼ嗔ip freeze / npm ls --json
 """
 import json
 import subprocess

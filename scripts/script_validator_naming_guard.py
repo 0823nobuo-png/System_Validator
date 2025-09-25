@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Script: Validator Naming Guard
 
@@ -38,7 +38,7 @@ def main():
 if __name__ == "__main__":
     main()
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/scripts/script_validator_naming_guard.py
 # /root/System_Validator/APP_DIR/theaterverse_final/scripts/script_validator_naming_guard.py
 # --- END OF STRUCTURE ---

@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Core Plugin Registry - dynamic plugin loading and lifecycle management.
 
@@ -74,7 +74,7 @@ class PluginRegistry:
             logger.warning("Plugin %s has no register() function", plugin_name)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_plugin_registry.py
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_plugin_registry.py
 # --- END OF STRUCTURE ---

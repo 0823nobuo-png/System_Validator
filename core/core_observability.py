@@ -1,13 +1,10 @@
-"""
+﻿"""
 core_observability.py
 
-目的（強化④ 可観測性）:
-- OpenTelemetry のトレーシング初期化（OTLP / stdout 簡易切替）
-- Prometheus メトリクス（Counter/Histogram/Gauge）エクスポート
-- LLM/認証/DB/アプリの汎用計測ヘルパ
-- 依存最小: opentelemetry-sdk, opentelemetry-exporter-otlp, prometheus-client
+逶ｮ逧・ｼ亥ｼｷ蛹問促 蜿ｯ隕ｳ貂ｬ諤ｧ・・
+- OpenTelemetry 縺ｮ繝医Ξ繝ｼ繧ｷ繝ｳ繧ｰ蛻晄悄蛹厄ｼ・TLP / stdout 邁｡譏灘・譖ｿ・・- Prometheus 繝｡繝医Μ繧ｯ繧ｹ・・ounter/Histogram/Gauge・峨お繧ｯ繧ｹ繝昴・繝・- LLM/隱崎ｨｼ/DB/繧｢繝励Μ縺ｮ豎守畑險域ｸｬ繝倥Ν繝・- 萓晏ｭ俶怙蟆・ opentelemetry-sdk, opentelemetry-exporter-otlp, prometheus-client
 
-正式パス：/root/System_Validator/APP_DIR/theaterverse_final/core/core_observability.py
+豁｣蠑上ヱ繧ｹ・・root/System_Validator/APP_DIR/theaterverse_final/core/core_observability.py
 """
 from __future__ import annotations
 

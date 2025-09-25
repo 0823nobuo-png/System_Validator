@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 SystemValidator Verification Kit - SAFE MODE Scanner (ASCII only)
 - Accepts commented END markers for code files

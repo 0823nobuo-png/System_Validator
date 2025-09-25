@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Tool: YAML Schema Validator
 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     sample_path = "/root/System_Validator/APP_DIR/theaterverse_final/config/config_app_defaults.yaml"
     print(validator.validate_file(sample_path))
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/tools/tool_yaml_schema_validator.py
 # /root/System_Validator/APP_DIR/theaterverse_final/tools/tool_yaml_schema_validator.py
 # --- END OF STRUCTURE ---

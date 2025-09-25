@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Core Event Bus - Pub/Sub messaging system
 
@@ -49,7 +49,7 @@ class EventBus:
                 logger.exception("Error in async handler for event '%s': %s", event, e)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_event_bus.py
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_event_bus.py
 # --- END OF STRUCTURE ---

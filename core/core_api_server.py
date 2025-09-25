@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Core API Server - FastAPI application with integrated kernel and plugins.
 
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     server = CoreAPIServer(base_dir)
     server.run()
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_api_server.py
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_api_server.py
 # --- END OF STRUCTURE ---

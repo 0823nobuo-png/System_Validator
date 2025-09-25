@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Plugin: PostgreSQL Storage Adapter
 
@@ -42,7 +42,7 @@ def routes(app):
     app.include_router(router)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_storage_postgres/plugin_storage_postgres_adapter.py
 # /root/System_Validator/APP_DIR/theaterverse_final/plugins/plugin_storage_postgres/plugin_storage_postgres_adapter.py
 # --- END OF STRUCTURE ---

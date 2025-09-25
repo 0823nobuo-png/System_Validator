@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Core Kernel - Immutable Center Unit
 
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     if kernel.bootstrap():
         print("[CoreKernel] Bootstrap complete.")
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_kernel.py
 # /root/System_Validator/APP_DIR/theaterverse_final/core/core_kernel.py
 # --- END OF STRUCTURE ---

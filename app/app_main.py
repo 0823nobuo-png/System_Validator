@@ -1,15 +1,9 @@
-"""
+﻿"""
 app_main.py
 
-目的：
-- Systemd から起動されるアプリ実体（`python -m app.main` を想定）
-- FastAPI による HTTP エンドポイント提供
-  - GET /health … ヘルスチェック
-  - POST /v1/chat … OpenAI互換の chat/completions 風IF（最小）
-- Observability 初期化（OTel + Prometheus）
-- OIDC 検証（任意）
-
-正式パス：/root/System_Validator/APP_DIR/theaterverse_final/app/main.py
+逶ｮ逧・ｼ・- Systemd 縺九ｉ襍ｷ蜍輔＆繧後ｋ繧｢繝励Μ螳滉ｽ難ｼ・python -m app.main` 繧呈Φ螳夲ｼ・- FastAPI 縺ｫ繧医ｋ HTTP 繧ｨ繝ｳ繝峨・繧､繝ｳ繝域署萓・  - GET /health 窶ｦ 繝倥Ν繧ｹ繝√ぉ繝・け
+  - POST /v1/chat 窶ｦ OpenAI莠呈鋤縺ｮ chat/completions 鬚ｨIF・域怙蟆擾ｼ・- Observability 蛻晄悄蛹厄ｼ・Tel + Prometheus・・- OIDC 讀懆ｨｼ・井ｻｻ諢擾ｼ・
+豁｣蠑上ヱ繧ｹ・・root/System_Validator/APP_DIR/theaterverse_final/app/main.py
 """
 from __future__ import annotations
 

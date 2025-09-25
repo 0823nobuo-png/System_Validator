@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 DB ORM Models - SQLAlchemy models for PostgreSQL
 """
@@ -48,7 +48,7 @@ class PluginRegistry(Base):
     registered_at = Column(TIMESTAMP, default=datetime.utcnow)
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/db/db_orm_models.py
 # /root/System_Validator/APP_DIR/theaterverse_final/db/db_orm_models.py
 # --- END OF STRUCTURE ---

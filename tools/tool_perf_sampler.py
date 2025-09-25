@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Tool: Performance Sampler
 
@@ -37,7 +37,7 @@ if __name__ == "__main__":
         sampler.record(elapsed)
     print(sampler.summary())
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/tools/tool_perf_sampler.py
 # /root/System_Validator/APP_DIR/theaterverse_final/tools/tool_perf_sampler.py
 # --- END OF STRUCTURE ---

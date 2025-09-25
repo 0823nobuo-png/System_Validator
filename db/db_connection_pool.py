@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 DB Connection Pool - Async SQLAlchemy engine and session management.
 """
@@ -23,7 +23,7 @@ class DBPool:
             yield session
 
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/db/db_connection_pool.py
 # /root/System_Validator/APP_DIR/theaterverse_final/db/db_connection_pool.py
 # --- END OF STRUCTURE ---

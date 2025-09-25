@@ -1,4 +1,4 @@
-"""
+﻿"""
 System Validator / Theaterverse Final
 Script: Manifest Renamer
 
@@ -33,7 +33,7 @@ def main():
 if __name__ == "__main__":
     main()
 
---- END OF STRUCTURE ---
+# --- END OF STRUCTURE ---
 # /root/System_Validator/APP_DIR/theaterverse_final/scripts/script_manifest_renamer.py
 # /root/System_Validator/APP_DIR/theaterverse_final/scripts/script_manifest_renamer.py
 # --- END OF STRUCTURE ---

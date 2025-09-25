@@ -1,16 +1,14 @@
-"""
+﻿"""
 core_auth_manager.py
 
-機能：
-- OIDC Discovery / JWKS 取得とキャッシュ
-- JWT(ID/Access) 検証（iss/aud/exp/nbf/iAT、alg、署名）
-- スコープ/ロールに基づく権限制御
-- 監査ログ（PostgreSQL想定）書き込みフック
-- OpenTelemetry（任意）での計測
-- 設定は config/auth_oidc_settings.yaml から読み込み
+讖溯・・・- OIDC Discovery / JWKS 蜿門ｾ励→繧ｭ繝｣繝・す繝･
+- JWT(ID/Access) 讀懆ｨｼ・・ss/aud/exp/nbf/iAT縲∥lg縲∫ｽｲ蜷搾ｼ・- 繧ｹ繧ｳ繝ｼ繝・繝ｭ繝ｼ繝ｫ縺ｫ蝓ｺ縺･縺乗ｨｩ髯仙宛蠕｡
+- 逶｣譟ｻ繝ｭ繧ｰ・・ostgreSQL諠ｳ螳夲ｼ画嶌縺崎ｾｼ縺ｿ繝輔ャ繧ｯ
+- OpenTelemetry・井ｻｻ諢擾ｼ峨〒縺ｮ險域ｸｬ
+- 險ｭ螳壹・ config/auth_oidc_settings.yaml 縺九ｉ隱ｭ縺ｿ霎ｼ縺ｿ
 
-正式パス：/root/System_Validator/APP_DIR/theaterverse_final/core/core_auth_manager.py
-依存（例）：PyJWT, cryptography, psycopg2-binary, pyyaml
+豁｣蠑上ヱ繧ｹ・・root/System_Validator/APP_DIR/theaterverse_final/core/core_auth_manager.py
+萓晏ｭ假ｼ井ｾ具ｼ会ｼ啀yJWT, cryptography, psycopg2-binary, pyyaml
 """
 from __future__ import annotations
 
@@ -33,7 +31,7 @@ try:  # PyJWT
     from jwt import algorithms  # type: ignore
 except Exception as e:  # pragma: no cover
     raise RuntimeError(
-        "PyJWT が見つかりません。requirementsに 'PyJWT' を追加してください"
+        "PyJWT 縺瑚ｦ九▽縺九ｊ縺ｾ縺帙ｓ縲Ｓequirements縺ｫ 'PyJWT' 繧定ｿｽ蜉縺励※縺上□縺輔＞"
     ) from e
 
 try:
@@ -130,11 +128,9 @@ class CoreAuthManager:
     def check_scope_role(self, claims: Dict[str, Any], required_scopes: List[str], required_roles: Optional[List[str]] = None) -> bool:
         scopes = self._extract_scopes(claims)
         roles = set(claims.get("roles", []) or claims.get("role", []) or [])
-        # スコープ
-        if not set(required_scopes).issubset(scopes):
+        # 繧ｹ繧ｳ繝ｼ繝・        if not set(required_scopes).issubset(scopes):
             return False
-        # 役割（任意）
-        if required_roles:
+        # 蠖ｹ蜑ｲ・井ｻｻ諢擾ｼ・        if required_roles:
             for s in required_scopes:
                 allowed = set(self.cfg.authorization_scopes.get(s, []))
                 if not roles & allowed:
@@ -202,7 +198,7 @@ class CoreAuthManager:
 
     @staticmethod
     def _peek_header(token: str) -> Dict[str, Any]:
-        # JWTヘッダ（Base64URL）だけを復号
+        # JWT繝倥ャ繝・・ase64URL・峨□縺代ｒ蠕ｩ蜿ｷ
         seg = token.split(".")[0]
         padded = seg + "=" * (-len(seg) % 4)
         return json.loads(base64.urlsafe_b64decode(padded.encode("utf-8")).decode("utf-8"))
@@ -218,8 +214,7 @@ class CoreAuthManager:
             return set(scope_str)
         return set(str(scope_str).split())
 
-    # 監査（PostgreSQL）
-    def _audit_pg(self, event: str, detail: Dict[str, Any]) -> None:
+    # 逶｣譟ｻ・・ostgreSQL・・    def _audit_pg(self, event: str, detail: Dict[str, Any]) -> None:
         import os
         import psycopg2  # type: ignore
         dsn = os.environ.get("DATABASE_URL") or "dbname=system_validator user=postgres password=postgres host=127.0.0.1 port=5432"
